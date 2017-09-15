@@ -35,7 +35,7 @@ var fetchProfileAndWriteToFile = function(readFilePath, writeFilePath) {
     .then(function(user) {
       return getGitHubProfileAsync(user);
     })
-    .then(function(user){
+    .then(function(user) {
       return writeStateAsync(user, writeFilePath);
     })
     .catch(function(err) {
