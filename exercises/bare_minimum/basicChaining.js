@@ -17,10 +17,10 @@ var promiseConstructors = require('./promiseConstructor.js');
 var getGitHubProfileAsync = promisification.getGitHubProfileAsync;
 var pluckFirstLineFromFileAsync = promiseConstructors.pluckFirstLineFromFileAsync;
 
-var writeState = function( profile, writeFilePath, callback){
+var writeState = function(profile, writeFilePath, callback) {
   fs.writeFile(writeFilePath, JSON.stringify(profile), 'utf8', function(err, content) {
-    if(err) {
-      return callback(err,null);
+    if (err) {
+      return callback(err, null);
     } else {
       return callback(null, content);
     }
